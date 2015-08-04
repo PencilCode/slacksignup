@@ -7,7 +7,8 @@ slackinviteurl = (
     'https://pencilcode.slack.com/api/users.admin.invite?t=' +
     str(int(time.time())))
 slackchannels = 'C07M2MC5S'
-slacktoken = "xoxp-4784509350-4784509360-8214459411-7f0ec7"
+slacktoken = open(os.path.join(
+    os.path.dirname(os.path.realpath(__file__)), 'slack.token')).read().strip()
 
 googleformcsv = (
     'https://docs.google.com/spreadsheets/d/' +
